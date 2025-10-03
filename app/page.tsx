@@ -91,10 +91,7 @@ export default function Home() {
             cursor: 'pointer',
             transition: 'transform 0.2s',
             boxShadow: '0 4px 15px rgba(0,0,0,0.2)'
-          }} 
-          onMouseOver={(e) => e.currentTarget.style.transform = 'translateY(-2px)'}
-          onMouseOut={(e) => e.currentTarget.style.transform = 'translateY(0)'}
-          >
+          }}>
             Explore Map
           </button>
 
@@ -109,16 +106,7 @@ export default function Home() {
             cursor: 'pointer',
             transition: 'all 0.2s',
             backdropFilter: 'blur(10px)'
-          }}
-          onMouseOver={(e) => {
-            e.currentTarget.style.background = 'white';
-            e.currentTarget.style.color = '#f7931a';
-          }}
-          onMouseOut={(e) => {
-            e.currentTarget.style.background = 'transparent';
-            e.currentTarget.style.color = 'white';
-          }}
-          >
+          }}>
             Add Location
           </button>
         </div>
