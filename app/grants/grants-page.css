@@ -1,0 +1,445 @@
+/* Grants Page - Grant Program Styling */
+.grants-page {
+  background: #0a0a0a;
+  color: #ffffff;
+  min-height: 100vh;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  padding-top: 96px; /* 40px POC banner + 32px taskbar + 24px spacing */
+  font-weight: 300;
+  transition: margin-left 0.3s ease;
+}
+
+/* Adjust for DevSidebar on desktop */
+@media (min-width: 769px) {
+  .grants-page.with-sidebar-expanded {
+    margin-left: 260px;
+  }
+  
+  .grants-page.with-sidebar-collapsed {
+    margin-left: 60px;
+  }
+}
+
+.grants-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* Adjust container width when sidebar is present */
+@media (min-width: 769px) {
+  .grants-page.with-sidebar-expanded .grants-container {
+    max-width: calc(100vw - 260px - 80px);
+  }
+  
+  .grants-page.with-sidebar-collapsed .grants-container {
+    max-width: calc(100vw - 60px - 80px);
+  }
+}
+
+@media (min-width: 1440px) {
+  .grants-page.with-sidebar-expanded .grants-container {
+    max-width: min(1200px, calc(100vw - 260px - 160px));
+  }
+  
+  .grants-page.with-sidebar-collapsed .grants-container {
+    max-width: min(1200px, calc(100vw - 60px - 160px));
+  }
+}
+
+/* Hero Section - Full Width Black */
+.grants-hero {
+  min-height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 40px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: #000000;
+  /* Full viewport width - properly centered */
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  margin-top: -24px;
+  width: 100vw;
+  position: relative;
+  left: 0;
+  right: 0;
+}
+
+.grants-hero-icon {
+  margin-bottom: 20px;
+  font-size: 64px;
+}
+
+.grants-hero h1 {
+  font-size: 42px;
+  font-weight: 200;
+  margin: 0 0 16px 0;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.grants-tagline {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.4;
+  font-weight: 300;
+}
+
+.grants-badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #000;
+}
+
+/* Sections */
+section {
+  padding: 40px 0;
+  position: relative;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+section:first-of-type {
+  border-top: none;
+}
+
+section h2 {
+  font-size: 32px;
+  font-weight: 200;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+/* Mission Section */
+.mission-section {
+  background: #0d0d0d;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.mission-statement {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.mission-pillars {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pillar {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.pillar:hover {
+  transform: translateY(-5px);
+  border-color: rgba(247, 147, 26, 0.3);
+  background: rgba(247, 147, 26, 0.05);
+}
+
+.pillar-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  color: #f7931a;
+}
+
+.pillar h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.pillar p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 300;
+}
+
+/* Focus Section */
+.focus-section {
+  background: #0a0a0a;
+}
+
+.focus-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.focus-intro {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  margin-bottom: 40px;
+  font-weight: 300;
+}
+
+.focus-areas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.focus-area {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.focus-area:hover {
+  border-color: rgba(247, 147, 26, 0.3);
+  background: rgba(247, 147, 26, 0.03);
+}
+
+.focus-area-icon {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #f7931a;
+}
+
+.focus-area h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #ffffff;
+}
+
+.focus-area ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px 0;
+}
+
+.focus-area li {
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 6px 0;
+  padding-left: 12px;
+  position: relative;
+  font-weight: 300;
+}
+
+.focus-area li::before {
+  content: '•';
+  color: #f7931a;
+  position: absolute;
+  left: 0;
+}
+
+/* Process Section */
+.process-section {
+  background: #0d0d0d;
+}
+
+.track-selector {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+.track {
+  background: rgba(247, 147, 26, 0.1);
+  border: 1px solid rgba(247, 147, 26, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.track h3 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: #f7931a;
+}
+
+.track p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 300;
+}
+
+.application-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: 24px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  border-color: rgba(247, 147, 26, 0.3);
+  background: rgba(247, 147, 26, 0.03);
+}
+
+.step-number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  color: #000;
+  border-radius: 50%;
+  line-height: 40px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.step-content h4 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0 0 8px 0;
+  color: #ffffff;
+}
+
+.step-content p {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+/* Apply Section */
+.apply-section {
+  background: #0a0a0a;
+  text-align: center;
+}
+
+.apply-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.apply-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 32px;
+  font-weight: 300;
+}
+
+.apply-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.apply-btn.primary {
+  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  color: #000;
+}
+
+.apply-btn.primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(247, 147, 26, 0.3);
+}
+
+.apply-btn.secondary {
+  background: transparent;
+  color: #f7931a;
+  border: 1px solid #f7931a;
+}
+
+.apply-btn.secondary:hover {
+  background: rgba(247, 147, 26, 0.1);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .grants-page {
+    padding-top: 80px;
+  }
+  
+  .grants-container {
+    padding: 0 20px;
+  }
+  
+  .grants-hero {
+    padding: 40px 20px 30px;
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100vw);
+  }
+  
+  .grants-hero h1 {
+    font-size: 32px;
+  }
+  
+  .grants-hero-icon {
+    font-size: 48px;
+  }
+  
+  .mission-pillars,
+  .focus-areas,
+  .application-steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .apply-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .pillar,
+  .focus-area,
+  .step {
+    padding: 20px;
+  }
+}
