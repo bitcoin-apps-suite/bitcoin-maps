@@ -34,20 +34,25 @@ import './DevSidebar.css'
 
 export default function DevSidebar() {
   const pathname = usePathname()
-  const [isCollapsed, setIsCollapsed] = useState(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('devSidebarCollapsed')
-      return saved !== null ? saved === 'true' : true
-    }
-    return true
-  })
+  const [isCollapsed, setIsCollapsed] = useState(true)
   const [issueCount, setIssueCount] = useState<number>(0)
+  const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
+    setIsClient(true)
     if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('devSidebarCollapsed')
+      if (saved !== null) {
+        setIsCollapsed(saved === 'true')
+      }
+    }
+  }, [])
+
+  useEffect(() => {
+    if (isClient && typeof window !== 'undefined') {
       localStorage.setItem('devSidebarCollapsed', isCollapsed.toString())
     }
-  }, [isCollapsed])
+  }, [isCollapsed, isClient])
 
   // Fetch GitHub issues count
   useEffect(() => {
