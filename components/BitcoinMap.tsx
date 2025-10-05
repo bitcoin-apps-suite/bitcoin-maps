@@ -299,7 +299,9 @@ export default function BitcoinMap() {
       </div>
 
       {/* Map Component */}
-      <Map locations={filteredLocations} />
+      <div className="h-full w-full">
+        <Map locations={filteredLocations} />
+      </div>
 
       {/* Location Stats */}
       <div className="absolute bottom-20 left-4 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg p-4">

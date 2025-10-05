@@ -16,7 +16,7 @@ export default function Home() {
         <Taskbar onShowMap={() => setShowMap(true)} />
         <ProofOfConceptBar />
         <DevSidebar />
-        <div className="transition-all duration-300" style={{ marginLeft: '60px', marginTop: '62px' }}>
+        <div className="transition-all duration-300 h-screen" style={{ marginLeft: '60px', marginTop: '62px', height: 'calc(100vh - 62px)' }}>
           {/* Toggle button */}
           <button
             onClick={() => setShowMap(false)}
@@ -109,6 +109,26 @@ export default function Home() {
             }}>
               <h3 style={{ fontSize: '1.5rem', marginBottom: '15px' }}>🌐 Global Infrastructure</h3>
               <p style={{ opacity: 0.9 }}>Decentralized mapping protocol with Bitcoin-native monetization</p>
+            </div>
+          </div>
+
+          {/* Map Preview */}
+          <div style={{
+            background: 'rgba(255,255,255,0.1)',
+            padding: '20px',
+            borderRadius: '15px',
+            backdropFilter: 'blur(10px)',
+            border: '1px solid rgba(255,255,255,0.2)',
+            marginBottom: '30px'
+          }}>
+            <h3 style={{ fontSize: '1.25rem', marginBottom: '15px', textAlign: 'center' }}>🗺️ Live Map Preview</h3>
+            <div style={{ 
+              height: '300px', 
+              borderRadius: '10px', 
+              overflow: 'hidden',
+              border: '2px solid rgba(255,255,255,0.3)'
+            }}>
+              <BitcoinMap />
             </div>
           </div>
 
