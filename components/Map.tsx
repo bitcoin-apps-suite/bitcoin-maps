@@ -264,11 +264,11 @@ export default function Map({ locations }: MapProps) {
   useEffect(() => {
     if (!mapRef.current) return
 
-    // Initialize map
+    // Initialize map with default center
     const map = L.map(mapRef.current, {
       preferCanvas: true,
       zoomControl: false
-    }).setView([39.8283, -98.5795], 4) // Center on USA
+    }).setView([39.8283, -98.5795], 4) // Default center on USA
 
     // Add zoom control to top right
     L.control.zoom({
@@ -291,7 +291,84 @@ export default function Map({ locations }: MapProps) {
 
     mapInstanceRef.current = map
 
+    // Add event listener for manual re-centering
+    const handleRecenter = (event: any) => {
+      const { lat, lng } = event.detail
+      map.setView([lat, lng], 12)
+    }
+    window.addEventListener('recenterMap', handleRecenter)
+
+    // Try to get user's location and center map on it
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords
+          // Center map on user's location with good zoom level
+          map.setView([latitude, longitude], 12)
+          
+          // Add a marker for user's location
+          const userIcon = L.divIcon({
+            html: `
+              <div style="
+                background: #3b82f6;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 3px solid white;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                animation: pulse 2s infinite;
+              ">
+                <div style="
+                  width: 8px;
+                  height: 8px;
+                  background: white;
+                  border-radius: 50%;
+                "></div>
+              </div>
+              <style>
+                @keyframes pulse {
+                  0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+                  70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+                  100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+                }
+              </style>
+            `,
+            iconSize: [20, 20],
+            iconAnchor: [10, 10],
+            className: 'user-location-marker'
+          })
+          
+          L.marker([latitude, longitude], { icon: userIcon })
+            .addTo(map)
+            .bindPopup(`
+              <div style="font-family: system-ui, sans-serif; text-align: center;">
+                <h3 style="margin: 0 0 8px 0; color: #1f2937; font-size: 14px; font-weight: 600;">
+                  📍 Your Location
+                </h3>
+                <p style="margin: 0; color: #6b7280; font-size: 12px;">
+                  Lat: ${latitude.toFixed(6)}<br>
+                  Lng: ${longitude.toFixed(6)}
+                </p>
+              </div>
+            `)
+        },
+        (error) => {
+          console.log('Geolocation error:', error.message)
+          // If geolocation fails, keep default center
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 10000,
+          maximumAge: 300000 // 5 minutes
+        }
+      )
+    }
+
     return () => {
+      window.removeEventListener('recenterMap', handleRecenter)
       map.remove()
       mapInstanceRef.current = null
     }
@@ -337,6 +414,11 @@ export default function Map({ locations }: MapProps) {
       <div ref={mapRef} className="w-full h-full" />
       <style jsx global>{`
         .custom-map-marker {
+          background: transparent !important;
+          border: none !important;
+        }
+        
+        .user-location-marker {
           background: transparent !important;
           border: none !important;
         }

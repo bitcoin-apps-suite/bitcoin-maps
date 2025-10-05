@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
-import { MapPin, Plus, Search } from 'lucide-react'
+import { MapPin, Plus, Search, Crosshair } from 'lucide-react'
 
 // Dynamically import the Map component to avoid SSR issues
 const Map = dynamic(() => import('./Map'), { 
@@ -288,6 +288,29 @@ export default function BitcoinMap() {
             </option>
           ))}
         </select>
+
+        <button
+          onClick={() => {
+            if (navigator.geolocation) {
+              navigator.geolocation.getCurrentPosition(
+                (position) => {
+                  const { latitude, longitude } = position.coords
+                  // Re-center map on user's location
+                  const event = new CustomEvent('recenterMap', {
+                    detail: { lat: latitude, lng: longitude }
+                  })
+                  window.dispatchEvent(event)
+                },
+                (error) => {
+                  console.log('Geolocation error:', error.message)
+                }
+              )
+            }
+          }}
+          className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors flex items-center gap-2"
+        >
+          <Crosshair className="w-4 h-4" />
+        </button>
 
         <button
           onClick={() => setShowAddForm(true)}
