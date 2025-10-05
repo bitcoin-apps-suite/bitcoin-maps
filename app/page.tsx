@@ -11,7 +11,7 @@ export default function Home() {
       <Taskbar />
       <ProofOfConceptBar />
       <DevSidebar />
-      <div className="transition-all duration-300 h-screen" style={{ marginLeft: '60px', marginTop: '62px', height: 'calc(100vh - 62px)' }}>
+      <div className="transition-all duration-300 h-screen relative" style={{ marginLeft: '60px', marginTop: '62px', height: 'calc(100vh - 62px)', zIndex: 1 }}>
         <BitcoinMap />
       </div>
       <Dock />

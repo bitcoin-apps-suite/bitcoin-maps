@@ -71,6 +71,8 @@ a {
 .bottom-20 { bottom: 5rem; }
 .z-50 { z-index: 50; }
 .z-\[60\] { z-index: 60; }
+.z-\[100\] { z-index: 100; }
+.z-\[200\] { z-index: 200; }
 .flex-1 { flex: 1; }
 .pl-10 { padding-left: 2.5rem; }
 .pr-4 { padding-right: 1rem; }
@@ -138,7 +140,7 @@ a {
   color: rgba(255, 255, 255, 0.9);
   user-select: none;
   position: fixed;
-  top: 0;
+  top: 40px;
   left: 0;
   right: 0;
   z-index: 10000;
