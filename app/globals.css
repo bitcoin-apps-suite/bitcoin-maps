@@ -12,7 +12,10 @@ body {
 
 body {
   color: #ffffff;
-  background: #111827;
+  background: #000000;
+  font-family: 'SF Pro Display', 'Helvetica Neue', 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {

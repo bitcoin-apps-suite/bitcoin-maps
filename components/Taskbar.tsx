@@ -88,32 +88,27 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
         { 
           label: 'Access Protocol', 
           shortcut: '⌘M', 
-          action: onShowMap 
+          action: () => window.location.href = '/'
         },
         { 
-          label: 'Add Location', 
-          shortcut: '⌘N', 
-          action: () => alert('Add location functionality coming soon') 
-        },
-        { divider: true },
-        { 
-          label: 'Search Locations', 
+          label: 'Features', 
           shortcut: '⌘F', 
-          action: () => console.log('Search') 
+          action: () => window.location.href = '/features'
         },
         { 
-          label: 'Filter by Type', 
-          shortcut: '⌘T', 
-          action: () => console.log('Filter') 
+          label: 'Contracts', 
+          shortcut: '⌘C', 
+          action: () => window.location.href = '/contracts'
         },
         { divider: true },
         { 
-          label: 'Export Data', 
-          action: () => console.log('Export data') 
+          label: 'Token Info', 
+          shortcut: '⌘T', 
+          action: () => window.location.href = '/token'
         },
         { 
-          label: 'Import Data', 
-          action: () => console.log('Import data') 
+          label: 'API Documentation', 
+          action: () => window.location.href = '/api'
         }
       ]
     },
@@ -127,7 +122,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
         },
         { 
           label: 'API Documentation', 
-          action: () => console.log('API docs') 
+          action: () => window.location.href = '/api'
         },
         { divider: true },
         { 

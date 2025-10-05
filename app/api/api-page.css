@@ -1,0 +1,186 @@
+/* API Page Specific Styles */
+.api-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.api-hero {
+  text-align: center;
+  padding: 60px 0;
+  border-bottom: 1px solid #333;
+}
+
+.api-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.api-tagline {
+  font-size: 1.25rem;
+  color: #b0b0b0;
+  margin-bottom: 30px;
+}
+
+.api-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #000;
+}
+
+.api-nav-section {
+  padding: 40px 0;
+  border-bottom: 1px solid #333;
+}
+
+.api-nav {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.api-nav button {
+  padding: 12px 24px;
+  background: transparent;
+  color: #b0b0b0;
+  border: 1px solid #333;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.api-nav button:hover {
+  background: #1a1a1a;
+  color: #f7931a;
+  border-color: #f7931a;
+}
+
+.api-nav button.active {
+  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  color: #000;
+  border-color: #f7931a;
+}
+
+.api-content {
+  padding: 60px 0;
+}
+
+.api-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #f7931a;
+}
+
+.api-section h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 40px 0 16px 0;
+  color: #fff;
+}
+
+.api-section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #b0b0b0;
+  margin-bottom: 24px;
+}
+
+.code-block {
+  background: #0a0a0a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 24px 0;
+  overflow-x: auto;
+}
+
+.code-block pre {
+  color: #e0e0e0;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.sdk-section {
+  padding: 80px 0;
+  border-top: 1px solid #333;
+}
+
+.sdk-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 60px;
+  color: #f7931a;
+}
+
+.sdk-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+}
+
+.sdk-card {
+  background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+  border-radius: 16px;
+  padding: 40px;
+}
+
+.sdk-card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #fff;
+}
+
+.sdk-card > p {
+  color: #f7931a;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .api-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .api-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .api-nav button {
+    width: 200px;
+  }
+  
+  .sdk-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .sdk-card {
+    padding: 24px;
+  }
+  
+  .code-block {
+    padding: 16px;
+  }
+}
