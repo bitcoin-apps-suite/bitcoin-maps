@@ -36,7 +36,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
     { name: 'Bitcoin Email', color: '#06b6d4', url: 'https://bitcoin-email.vercel.app' },
     { name: 'Bitcoin Exchange', color: '#10b981', url: 'https://bitcoin-exchange.vercel.app' },
     { name: 'Bitcoin Jobs', color: '#6b7280', url: 'https://bitcoin-jobs.vercel.app/' },
-    { name: 'Bitcoin Maps', color: '#f7931a', url: '#', current: true },
+    { name: 'Bitcoin Maps', color: '#0066CC', url: '#', current: true },
     { name: 'Bitcoin Music', color: '#8b5cf6', url: 'https://bitcoin-music.vercel.app' },
     { name: 'Bitcoin Paint', color: '#a855f7', url: 'https://bitcoin-paint.vercel.app' },
     { name: 'Bitcoin Pics', color: '#ec4899', url: '#', disabled: true },
@@ -113,6 +113,38 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
       ]
     },
     {
+      label: 'Blockchain',
+      items: [
+        { 
+          label: 'Exchange', 
+          shortcut: '⌘E', 
+          action: () => window.location.href = '/exchange'
+        },
+        { 
+          label: 'Token ($BMAPS)', 
+          action: () => window.location.href = '/token'
+        },
+        { divider: true },
+        { 
+          label: 'Platform Status', 
+          action: () => window.location.href = '/status'
+        },
+        { 
+          label: 'Blockchain Analytics', 
+          action: () => window.location.href = '/analytics'
+        },
+        { divider: true },
+        { 
+          label: 'Developer Grants', 
+          action: () => window.location.href = '/grants'
+        },
+        { 
+          label: 'Bounties Program', 
+          action: () => window.location.href = '/bounties'
+        }
+      ]
+    },
+    {
       label: 'Data',
       items: [
         { 
@@ -127,11 +159,15 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
         { divider: true },
         { 
           label: 'Contribute Data', 
-          action: () => alert('Earn $BMAPS tokens by contributing verified location data') 
+          action: () => window.location.href = '/contribute/add'
         },
         { 
-          label: 'Verify Location', 
-          action: () => console.log('Verify location') 
+          label: 'Business Registration', 
+          action: () => window.location.href = '/business/register'
+        },
+        { 
+          label: 'Business Verification', 
+          action: () => window.location.href = '/business/verify'
         },
         { divider: true },
         { 
@@ -152,13 +188,17 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
         { divider: true },
         { 
           label: 'Purchase Tokens', 
-          action: () => alert('Token purchase coming soon') 
+          action: () => window.location.href = '/exchange'
         },
         { 
           label: 'Generate API Key', 
           action: () => console.log('Generate API key') 
         },
         { divider: true },
+        { 
+          label: 'Business Analytics', 
+          action: () => window.location.href = '/business/analytics'
+        },
         { 
           label: 'Revenue Dashboard', 
           action: () => console.log('Revenue dashboard') 

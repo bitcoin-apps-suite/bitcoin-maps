@@ -261,14 +261,14 @@ export default function BitcoinMap() {
             placeholder="Search all locations, businesses, landmarks..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-bitcoin-orange"
+            className="w-full pl-10 pr-4 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary"
           />
         </div>
         
         <select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
-          className="px-3 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:border-bitcoin-orange text-sm"
+          className="px-3 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:border-primary text-sm"
         >
           {locationCategories.map(category => (
             <option key={category.value} value={category.value} className="bg-gray-800">
@@ -280,7 +280,7 @@ export default function BitcoinMap() {
         <select
           value={selectedType}
           onChange={(e) => setSelectedType(e.target.value)}
-          className="px-3 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:border-bitcoin-orange text-sm"
+          className="px-3 py-2 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg text-white focus:outline-none focus:border-primary text-sm"
         >
           {locationTypes.map(type => (
             <option key={type.value} value={type.value} className="bg-gray-800">
@@ -314,7 +314,7 @@ export default function BitcoinMap() {
 
         <button
           onClick={() => setShowAddForm(true)}
-          className="px-4 py-2 bg-bitcoin-orange hover:bg-orange-600 text-black font-medium rounded-lg transition-colors flex items-center gap-2"
+          className="px-4 py-2 bg-primary hover:bg-primary text-black font-medium rounded-lg transition-colors flex items-center gap-2"
         >
           <Plus className="w-4 h-4" />
           Add Location
@@ -329,12 +329,12 @@ export default function BitcoinMap() {
       {/* Location Stats */}
       <div className="absolute bottom-20 left-4 bg-black/50 backdrop-blur-sm border border-gray-600 rounded-lg p-4">
         <h3 className="text-lg font-semibold mb-2 flex items-center gap-2">
-          <MapPin className="w-5 h-5 text-bitcoin-orange" />
+          <MapPin className="w-5 h-5 text-primary" />
           Global Map Data
         </h3>
         <div className="space-y-1 text-sm">
-          <div>Total Locations: <span className="text-bitcoin-orange font-medium">{locations.length}</span></div>
-          <div>Showing: <span className="text-bitcoin-orange font-medium">{filteredLocations.length}</span></div>
+          <div>Total Locations: <span className="text-primary font-medium">{locations.length}</span></div>
+          <div>Showing: <span className="text-primary font-medium">{filteredLocations.length}</span></div>
           <div>Verified: <span className="text-green-400 font-medium">{locations.filter(l => l.verified).length}</span></div>
           <div>Categories: <span className="text-blue-400 font-medium">{new Set(locations.map(l => l.category)).size}</span></div>
         </div>
@@ -351,14 +351,14 @@ export default function BitcoinMap() {
               <input
                 type="text"
                 placeholder="Business name"
-                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-bitcoin-orange"
+                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-primary"
               />
               <input
                 type="text"
                 placeholder="Address"
-                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-bitcoin-orange"
+                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-primary"
               />
-              <select className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:border-bitcoin-orange">
+              <select className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white focus:outline-none focus:border-primary">
                 <option value="">Select type</option>
                 <option value="merchant">Merchant</option>
                 <option value="restaurant">Restaurant</option>
@@ -370,7 +370,7 @@ export default function BitcoinMap() {
               <textarea
                 placeholder="Description (optional)"
                 rows={3}
-                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-bitcoin-orange resize-none"
+                className="w-full px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white placeholder-gray-400 focus:outline-none focus:border-primary resize-none"
               />
             </div>
 
@@ -386,7 +386,7 @@ export default function BitcoinMap() {
                   // TODO: Implement add location functionality
                   setShowAddForm(false)
                 }}
-                className="flex-1 px-4 py-2 bg-bitcoin-orange hover:bg-orange-600 text-black font-medium rounded transition-colors"
+                className="flex-1 px-4 py-2 bg-primary hover:bg-primary text-black font-medium rounded transition-colors"
               >
                 Contribute Data
               </button>

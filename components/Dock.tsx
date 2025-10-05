@@ -50,7 +50,7 @@ const Dock: React.FC = () => {
     
     const colorMap: { [key: string]: string } = {
       'text-orange-500': '#f97316',
-      'text-bitcoin-orange': '#f7931a',
+      'text-bitcoin-orange': '#0066CC',
       'text-yellow-500': '#eab308',
       'text-red-500': '#ef4444',
       'text-purple-500': '#a855f7',
@@ -135,7 +135,7 @@ const Dock: React.FC = () => {
             title="Bitcoin Corporation"
             onClick={() => window.location.href = 'https://bitcoin-corp.vercel.app/'}
           >
-            <Building2 className="status-icon" style={{ color: '#f7931a' }} />
+            <Building2 className="status-icon" style={{ color: '#0066CC' }} />
           </button>
           <button 
             className="status-button" 

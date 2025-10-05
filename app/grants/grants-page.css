@@ -94,7 +94,7 @@
 .grants-badge {
   display: inline-block;
   padding: 8px 20px;
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
@@ -161,14 +161,14 @@ section h2 {
 
 .pillar:hover {
   transform: translateY(-5px);
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.05);
 }
 
 .pillar-icon {
   font-size: 32px;
   margin-bottom: 16px;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .pillar h3 {
@@ -220,14 +220,14 @@ section h2 {
 }
 
 .focus-area:hover {
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.03);
 }
 
 .focus-area-icon {
   font-size: 24px;
   margin-bottom: 12px;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .focus-area h4 {
@@ -255,7 +255,7 @@ section h2 {
 
 .focus-area li::before {
   content: '•';
-  color: #f7931a;
+  color: var(--bmaps-primary);
   position: absolute;
   left: 0;
 }
@@ -282,7 +282,7 @@ section h2 {
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 8px 0;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .track p {
@@ -310,7 +310,7 @@ section h2 {
 }
 
 .step:hover {
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.03);
 }
 
@@ -318,7 +318,7 @@ section h2 {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
   border-radius: 50%;
   line-height: 40px;
@@ -381,7 +381,7 @@ section h2 {
 }
 
 .apply-btn.primary {
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
 }
 
@@ -392,8 +392,8 @@ section h2 {
 
 .apply-btn.secondary {
   background: transparent;
-  color: #f7931a;
-  border: 1px solid #f7931a;
+  color: var(--bmaps-primary);
+  border: 1px solid var(--bmaps-primary);
 }
 
 .apply-btn.secondary:hover {

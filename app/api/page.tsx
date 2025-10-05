@@ -1,6 +1,10 @@
 'use client'
 
 import React, { useState } from 'react'
+import ProofOfConceptBar from '../../components/ProofOfConceptBar'
+import DevSidebar from '../../components/DevSidebar'
+import Dock from '../../components/Dock'
+import Taskbar from '../../components/Taskbar'
 import '../page-styles.css'
 import './api-page.css'
 
@@ -8,7 +12,11 @@ export default function ApiPage() {
   const [activeSection, setActiveSection] = useState('authentication')
 
   return (
-    <div className="page-container">
+    <div className="min-h-screen bg-gray-900">
+      <Taskbar />
+      <ProofOfConceptBar />
+      <DevSidebar />
+      <div className="page-container">
       <div className="api-container">
         {/* Hero Section */}
         <section className="api-hero">
@@ -207,7 +215,9 @@ map_data = client.get_map('map_id')`}</pre>
             </div>
           </div>
         </section>
+        </div>
       </div>
+      <Dock />
     </div>
   )
 }

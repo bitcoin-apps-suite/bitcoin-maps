@@ -13,7 +13,7 @@ export default function Taskbar({ openWindows, activeWindow, onWindowClick }: Ta
     <div className="taskbar relative h-10 flex items-center justify-between px-4 hidden md:flex z-50 bg-gray-800/95 backdrop-blur-sm border-b border-gray-700">
       <div className="flex items-center space-x-2">
         <button className="p-1 hover:bg-white/10 rounded transition-colors">
-          <Bitcoin className="w-4 h-4 text-bitcoin-orange" />
+          <Bitcoin className="w-4 h-4 text-primary" />
         </button>
         
         <div className="border-l border-gray-600 h-6 mx-2" />
@@ -25,7 +25,7 @@ export default function Taskbar({ openWindows, activeWindow, onWindowClick }: Ta
               key={window}
               className={`px-3 py-1 rounded text-sm transition-colors ${
                 activeWindow === window 
-                  ? 'bg-bitcoin-orange text-black' 
+                  ? 'bg-primary text-white' 
                   : 'bg-gray-800 hover:bg-gray-700'
               }`}
               onClick={() => onWindowClick(window)}

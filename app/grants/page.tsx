@@ -1,6 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import ProofOfConceptBar from '../../components/ProofOfConceptBar'
+import DevSidebar from '../../components/DevSidebar'
+import Dock from '../../components/Dock'
+import Taskbar from '../../components/Taskbar'
 import './grants-page.css'
 
 export default function GrantsPage() {
@@ -47,7 +51,10 @@ export default function GrantsPage() {
   }
 
   return (
-    <div className="App">
+    <div className="min-h-screen bg-gray-900">
+      <Taskbar />
+      <ProofOfConceptBar />
+      <DevSidebar />
       <div className={`grants-page ${!isMobile && !devSidebarCollapsed ? 'with-sidebar-expanded' : ''} ${!isMobile && devSidebarCollapsed ? 'with-sidebar-collapsed' : ''}`}>
         <div className="grants-container">
           {/* Hero Section */}
@@ -55,7 +62,7 @@ export default function GrantsPage() {
             <div className="grants-hero-icon">
               🗺️
             </div>
-            <h1>Bitcoin Maps <span style={{color: '#f7931a'}}>Grants</span></h1>
+            <h1>Bitcoin Maps <span className="text-primary">Grants</span></h1>
             <p className="grants-tagline">
               $BMAPS token awards for quality mapping submissions, plus public discovery platform for independent funding
             </p>
@@ -107,7 +114,7 @@ export default function GrantsPage() {
                     <li>Develop mapping tools and resources</li>
                     <li>Build integrations with other BSV applications</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Feature development, infrastructure, integrations
                   </div>
                 </div>
@@ -121,7 +128,7 @@ export default function GrantsPage() {
                     <li>Build educational content about tokenized mapping</li>
                     <li>Host workshops and training sessions</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Course development, instructional design, certification systems
                   </div>
                 </div>
@@ -135,7 +142,7 @@ export default function GrantsPage() {
                     <li>Build autonomous vehicle mapping solutions</li>
                     <li>Design smart city mapping infrastructure</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Research, prototyping, pilot programs
                   </div>
                 </div>
@@ -149,7 +156,7 @@ export default function GrantsPage() {
                     <li>Build partnerships with mapping organizations</li>
                     <li>Develop mapper recruitment and retention programs</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Event organization, community management, partnerships
                   </div>
                 </div>
@@ -163,7 +170,7 @@ export default function GrantsPage() {
                     <li>Improve scalability for global deployment</li>
                     <li>Develop edge computing solutions for mapping</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Performance optimization, infrastructure development
                   </div>
                 </div>
@@ -177,7 +184,7 @@ export default function GrantsPage() {
                     <li>Develop crowdsourced validation mechanisms</li>
                     <li>Design incentive systems for accurate mapping</li>
                   </ul>
-                  <div style={{marginTop: '10px', fontSize: '12px', color: '#f7931a'}}>
+                  <div style={{marginTop: '10px', fontSize: '12px'}} className="text-primary">
                     Funded: Algorithm development, quality systems, validation tools
                   </div>
                 </div>
@@ -249,6 +256,7 @@ export default function GrantsPage() {
           </section>
         </div>
       </div>
+      <Dock />
     </div>
   )
 }

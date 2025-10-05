@@ -1,6 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import ProofOfConceptBar from '../../components/ProofOfConceptBar'
+import DevSidebar from '../../components/DevSidebar'
+import Dock from '../../components/Dock'
+import Taskbar from '../../components/Taskbar'
 import './token-page.css'
 
 export default function TokenPage() {
@@ -50,7 +54,10 @@ export default function TokenPage() {
   }
 
   return (
-    <div className="App">
+    <div className="min-h-screen bg-gray-900">
+      <Taskbar />
+      <ProofOfConceptBar />
+      <DevSidebar />
       <div className={`token-page ${!isMobile && !devSidebarCollapsed ? 'with-sidebar-expanded' : ''} ${!isMobile && devSidebarCollapsed ? 'with-sidebar-collapsed' : ''}`}>
         <div className="token-container">
           {/* Hero Section */}
@@ -332,6 +339,7 @@ export default function TokenPage() {
           </section>
         </div>
       </div>
+      <Dock />
     </div>
   )
 }

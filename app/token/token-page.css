@@ -1,7 +1,7 @@
 /* Token Page - Compact Refined Style */
 .token-page {
-  background: #0a0a0a;
-  color: #ffffff;
+  background: #0a0f1a;
+  color: #e8f0ff;
   min-height: 100vh;
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   padding-top: 96px; /* 40px POC banner + 32px taskbar + 24px spacing */
@@ -57,7 +57,7 @@
   padding: 60px 20px 40px;
   text-align: center;
   margin-bottom: 40px;
-  background: #000000;
+  background: #060b12;
   /* Full viewport width - properly centered */
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
@@ -71,14 +71,14 @@
 .token-badge {
   display: inline-block;
   padding: 8px 20px;
-  background: linear-gradient(90deg, #ffa500, #ffcd00);
+  background: linear-gradient(135deg, #0066CC 0%, #3399FF 100%);
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 20px;
-  color: #000;
+  color: #ffffff;
 }
 
 .token-hero h1 {
@@ -87,7 +87,7 @@
   margin: 0 0 16px 0;
   line-height: 1.1;
   letter-spacing: -1px;
-  background: linear-gradient(90deg, #ffcd00, #ffa500);
+  background: linear-gradient(135deg, #0066CC 0%, #3399FF 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -95,7 +95,7 @@
 
 .token-tagline {
   font-size: 16px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(232, 240, 255, 0.7);
   margin: 0 0 16px 0;
   max-width: 600px;
   font-weight: 300;
@@ -125,7 +125,7 @@
   font-size: 16px;
   line-height: 1.7;
   margin: 0 0 24px 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(232, 240, 255, 0.85);
   font-weight: 300;
 }
 
@@ -144,12 +144,12 @@
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 8px 0;
-  color: #ffa500;
+  color: #0066CC;
 }
 
 .point p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(232, 240, 255, 0.7);
   margin: 0;
   font-weight: 300;
 }
@@ -169,8 +169,8 @@
 }
 
 .model-card {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.15);
   border-radius: 8px;
   padding: 32px;
   margin: 0 0 24px 0;
@@ -181,15 +181,15 @@
 }
 
 .model-card.warning {
-  border-color: rgba(255, 165, 0, 0.2);
-  background: rgba(255, 165, 0, 0.02);
+  border-color: rgba(0, 102, 204, 0.3);
+  background: rgba(0, 102, 204, 0.08);
 }
 
 .model-card h3 {
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 20px 0;
-  color: #ffa500;
+  color: #0066CC;
 }
 
 .model-card ul {
@@ -200,10 +200,10 @@
 
 .model-card li {
   padding: 12px 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(232, 240, 255, 0.1);
   font-size: 15px;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(232, 240, 255, 0.85);
   font-weight: 300;
 }
 
@@ -212,7 +212,7 @@
 }
 
 .model-card strong {
-  color: #ffffff;
+  color: #e8f0ff;
   font-weight: 500;
 }
 
@@ -240,7 +240,7 @@
   line-height: 1.6;
   text-align: center;
   margin: 0 0 48px 0;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(232, 240, 255, 0.85);
   font-weight: 300;
 }
 
@@ -248,7 +248,7 @@
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 24px 0;
-  color: #ffa500;
+  color: #0066CC;
   text-align: center;
 }
 
@@ -260,8 +260,8 @@
 }
 
 .stream {
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.15);
   border-radius: 8px;
   padding: 24px;
   text-align: center;
@@ -269,8 +269,8 @@
 }
 
 .stream.featured {
-  border-color: #ffa500;
-  background: rgba(255, 165, 0, 0.05);
+  border-color: #0066CC;
+  background: rgba(0, 102, 204, 0.12);
   transform: scale(1.02);
 }
 
@@ -278,12 +278,12 @@
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 8px 0;
-  color: #ffffff;
+  color: #e8f0ff;
 }
 
 .stream p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(232, 240, 255, 0.7);
   margin: 0 0 16px 0;
   font-weight: 300;
 }
@@ -291,7 +291,7 @@
 .price {
   font-size: 20px;
   font-weight: 600;
-  color: #ffa500;
+  color: #0066CC;
   margin: 0;
 }
 
@@ -304,7 +304,7 @@
   font-size: 24px;
   font-weight: 400;
   margin: 0 0 24px 0;
-  color: #ffa500;
+  color: #0066CC;
   text-align: center;
 }
 
@@ -322,12 +322,12 @@
   align-items: center;
   gap: 16px;
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(232, 240, 255, 0.85);
   font-weight: 300;
 }
 
 .arrow {
-  color: #ffa500;
+  color: #0066CC;
   font-size: 16px;
 }
 
@@ -364,8 +364,8 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: linear-gradient(90deg, #ffa500, #ffcd00);
-  color: #000;
+  background: linear-gradient(135deg, #0066CC 0%, #3399FF 100%);
+  color: #ffffff;
   border-radius: 50%;
   line-height: 40px;
   font-size: 16px;
@@ -377,12 +377,12 @@
   font-size: 18px;
   font-weight: 500;
   margin: 0 0 8px 0;
-  color: #ffffff;
+  color: #e8f0ff;
 }
 
 .step p {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(232, 240, 255, 0.7);
   margin: 0;
   font-weight: 300;
   line-height: 1.5;
@@ -398,7 +398,7 @@
   font-size: 20px;
   font-weight: 500;
   margin: 0 0 24px 0;
-  color: #ffa500;
+  color: #0066CC;
 }
 
 .contribution-examples ul {
@@ -413,7 +413,7 @@
 
 .contribution-examples li {
   font-size: 14px;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(232, 240, 255, 0.85);
   font-weight: 300;
   padding: 4px 0;
 }
@@ -442,8 +442,8 @@
 
 .stat {
   text-align: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(0, 102, 204, 0.05);
+  border: 1px solid rgba(0, 102, 204, 0.15);
   border-radius: 8px;
   padding: 32px 24px;
 }
@@ -452,7 +452,7 @@
   font-size: 14px;
   font-weight: 500;
   margin: 0 0 8px 0;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(232, 240, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -460,14 +460,14 @@
 .stat-value {
   font-size: 28px;
   font-weight: 600;
-  color: #ffa500;
+  color: #0066CC;
   margin: 0;
   display: block;
 }
 
 .stat-label {
   font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(232, 240, 255, 0.6);
   margin: 4px 0 0 0;
   font-weight: 300;
 }
@@ -495,12 +495,12 @@
   font-size: 15px;
   line-height: 1.7;
   margin: 0 0 24px 0;
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(232, 240, 255, 0.8);
   font-weight: 300;
 }
 
 .legal-content strong {
-  color: #ffffff;
+  color: #e8f0ff;
   font-weight: 500;
 }
 
@@ -537,23 +537,23 @@
 }
 
 .cta-btn.primary {
-  background: linear-gradient(90deg, #ffa500, #ffcd00);
-  color: #000;
+  background: linear-gradient(135deg, #0066CC 0%, #3399FF 100%);
+  color: #ffffff;
 }
 
 .cta-btn.primary:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 102, 204, 0.3);
 }
 
 .cta-btn.secondary {
   background: transparent;
-  color: #ffa500;
-  border: 1px solid #ffa500;
+  color: #0066CC;
+  border: 1px solid #0066CC;
 }
 
 .cta-btn.secondary:hover {
-  background: rgba(255, 165, 0, 0.1);
+  background: rgba(0, 102, 204, 0.1);
 }
 
 /* Mobile Responsiveness */

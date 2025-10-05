@@ -41,7 +41,7 @@ export default function Map({ locations }: MapProps) {
   const markersRef = useRef<L.Marker[]>([])
 
   const getIconForType = (type: string, category: string, verified: boolean) => {
-    const color = verified ? '#f7931a' : '#6b7280'
+    const color = verified ? '#0066CC' : '#6b7280'
     
     // Icons based on category and type
     const categoryIcons: { [key: string]: string } = {
@@ -178,7 +178,7 @@ export default function Map({ locations }: MapProps) {
               ${location.category}
             </span>
             <span style="
-              background: #f7931a;
+              background: #0066CC;
               color: white;
               padding: 2px 6px;
               border-radius: 12px;
@@ -465,7 +465,7 @@ export default function Map({ locations }: MapProps) {
         }
         
         .leaflet-control-attribution a {
-          color: #f7931a !important;
+          color: #0066CC !important;
         }
       `}</style>
     </>

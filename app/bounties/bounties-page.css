@@ -94,7 +94,7 @@
 .bounties-badge {
   display: inline-block;
   padding: 8px 20px;
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   border-radius: 100px;
   font-size: 14px;
   font-weight: 500;
@@ -161,7 +161,7 @@ section h2 {
 
 .work-step:hover {
   transform: translateY(-5px);
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.05);
 }
 
@@ -206,7 +206,7 @@ section h2 {
 
 .bounty-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.03);
 }
 
@@ -227,7 +227,7 @@ section h2 {
 }
 
 .bounty-reward {
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
   padding: 4px 8px;
   border-radius: 4px;
@@ -273,7 +273,7 @@ section h2 {
 }
 
 .bounty-deadline {
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .bounty-tags {
@@ -311,7 +311,7 @@ section h2 {
 }
 
 .btn-primary {
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
 }
 
@@ -322,7 +322,7 @@ section h2 {
 
 .btn-secondary {
   background: transparent;
-  color: #f7931a;
+  color: var(--bmaps-primary);
   border: 1px solid rgba(247, 147, 26, 0.5);
 }
 
@@ -354,7 +354,7 @@ section h2 {
 }
 
 .bounty-type:hover {
-  border-color: rgba(247, 147, 26, 0.3);
+  border-color: rgba(0, 102, 204, 0.3);
   background: rgba(247, 147, 26, 0.03);
 }
 
@@ -380,7 +380,7 @@ section h2 {
 
 .bounty-type-reward {
   font-size: 12px;
-  color: #f7931a;
+  color: var(--bmaps-primary);
   font-weight: 500;
 }
 
@@ -411,7 +411,7 @@ section h2 {
   font-size: 16px;
   font-weight: 500;
   margin: 0 0 12px 0;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .guideline ul {
@@ -431,7 +431,7 @@ section h2 {
 
 .guideline li::before {
   content: '•';
-  color: #f7931a;
+  color: var(--bmaps-primary);
   position: absolute;
   left: 0;
 }
@@ -475,7 +475,7 @@ section h2 {
 }
 
 .cta-btn.primary {
-  background: linear-gradient(90deg, #f7931a, #ff6b00);
+  background: linear-gradient(90deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
 }
 
@@ -486,8 +486,8 @@ section h2 {
 
 .cta-btn.secondary {
   background: transparent;
-  color: #f7931a;
-  border: 1px solid #f7931a;
+  color: var(--bmaps-primary);
+  border: 1px solid var(--bmaps-primary);
 }
 
 .cta-btn.secondary:hover {

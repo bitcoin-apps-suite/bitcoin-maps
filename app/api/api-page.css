@@ -15,7 +15,7 @@
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  background: linear-gradient(135deg, var(--bmaps-primary), var(--bmaps-primary-light));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -30,7 +30,7 @@
 .api-badge {
   display: inline-block;
   padding: 8px 16px;
-  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  background: linear-gradient(135deg, var(--bmaps-primary), var(--bmaps-primary-light));
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
@@ -65,14 +65,14 @@
 
 .api-nav button:hover {
   background: #1a1a1a;
-  color: #f7931a;
-  border-color: #f7931a;
+  color: var(--bmaps-primary);
+  border-color: var(--bmaps-primary);
 }
 
 .api-nav button.active {
-  background: linear-gradient(135deg, #f7931a, #ff6b00);
+  background: linear-gradient(135deg, var(--bmaps-primary), var(--bmaps-primary-light));
   color: #000;
-  border-color: #f7931a;
+  border-color: var(--bmaps-primary);
 }
 
 .api-content {
@@ -83,7 +83,7 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .api-section h3 {
@@ -128,7 +128,7 @@
   font-weight: 700;
   text-align: center;
   margin-bottom: 60px;
-  color: #f7931a;
+  color: var(--bmaps-primary);
 }
 
 .sdk-grid {
@@ -151,7 +151,7 @@
 }
 
 .sdk-card > p {
-  color: #f7931a;
+  color: var(--bmaps-primary);
   font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
   font-size: 14px;
   margin-bottom: 20px;

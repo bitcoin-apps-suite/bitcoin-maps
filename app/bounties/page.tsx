@@ -1,6 +1,10 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
+import ProofOfConceptBar from '../../components/ProofOfConceptBar'
+import DevSidebar from '../../components/DevSidebar'
+import Dock from '../../components/Dock'
+import Taskbar from '../../components/Taskbar'
 import './bounties-page.css'
 
 export default function BountiesPage() {
@@ -86,7 +90,10 @@ export default function BountiesPage() {
   ]
 
   return (
-    <div className="App">
+    <div className="min-h-screen bg-gray-900">
+      <Taskbar />
+      <ProofOfConceptBar />
+      <DevSidebar />
       <div className={`bounties-page ${!isMobile && !devSidebarCollapsed ? 'with-sidebar-expanded' : ''} ${!isMobile && devSidebarCollapsed ? 'with-sidebar-collapsed' : ''}`}>
         <div className="bounties-container">
           {/* Hero Section */}
@@ -94,7 +101,7 @@ export default function BountiesPage() {
             <div className="bounties-hero-icon">
               🎯
             </div>
-            <h1>Bitcoin Maps <span style={{color: '#f7931a'}}>Bounties</span></h1>
+            <h1>Bitcoin Maps <span className="text-primary">Bounties</span></h1>
             <p className="bounties-tagline">
               Earn $BMAPS tokens by solving specific technical challenges and improving the platform
             </p>
@@ -258,6 +265,7 @@ export default function BountiesPage() {
           </section>
         </div>
       </div>
+      <Dock />
     </div>
   )
 }

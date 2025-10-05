@@ -1,11 +1,19 @@
 'use client'
 
 import React from 'react'
+import ProofOfConceptBar from '../../components/ProofOfConceptBar'
+import DevSidebar from '../../components/DevSidebar'
+import Dock from '../../components/Dock'
+import Taskbar from '../../components/Taskbar'
 import '../page-styles.css'
 
 export default function FeaturesPage() {
   return (
-    <div className="page-container">
+    <div className="min-h-screen bg-gray-900">
+      <Taskbar />
+      <ProofOfConceptBar />
+      <DevSidebar />
+      <div className="page-container">
       {/* Hero Section */}
       <section className="hero-section">
         <div className="container">
@@ -133,6 +141,8 @@ export default function FeaturesPage() {
           </div>
         </div>
       </section>
+      </div>
+      <Dock />
     </div>
   )
 }
