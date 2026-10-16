@@ -39,15 +39,15 @@ export default function FeaturesPage() {
           </div>
           <div className="hero-stats">
             <div className="stat">
-              <span className="stat-value">10M+</span>
+              <span className="stat-value">—</span>
               <span className="stat-label">BMAPS Tokens</span>
             </div>
             <div className="stat">
-              <span className="stat-value">150+</span>
+              <span className="stat-value">—</span>
               <span className="stat-label">Active Contracts</span>
             </div>
             <div className="stat">
-              <span className="stat-value">$500K+</span>
+              <span className="stat-value">—</span>
               <span className="stat-label">Paid to Mappers</span>
             </div>
           </div>

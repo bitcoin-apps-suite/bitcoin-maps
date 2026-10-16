@@ -50,44 +50,7 @@ export default function BountiesPage() {
     return null
   }
 
-  const activeBounties = [
-    {
-      id: 1,
-      title: "Improve Map Rendering Performance",
-      description: "Optimize the map rendering pipeline to handle 10,000+ markers smoothly",
-      reward: "2,500 BMAPS",
-      difficulty: "Advanced",
-      tags: ["Performance", "React", "WebGL"],
-      deadline: "30 days"
-    },
-    {
-      id: 2,
-      title: "Add Offline Map Support",
-      description: "Implement offline caching for map tiles and basic functionality without internet",
-      reward: "5,000 BMAPS",
-      difficulty: "Expert", 
-      tags: ["PWA", "Caching", "Service Workers"],
-      deadline: "45 days"
-    },
-    {
-      id: 3,
-      title: "Create Mobile AR Map View",
-      description: "Develop augmented reality view for mobile users to overlay map data on camera feed",
-      reward: "8,000 BMAPS",
-      difficulty: "Expert",
-      tags: ["AR", "Mobile", "Computer Vision"],
-      deadline: "60 days"
-    },
-    {
-      id: 4,
-      title: "Fix Map Export Bug",
-      description: "Resolve issue where exported maps lose coordinate precision in certain formats",
-      reward: "500 BMAPS",
-      difficulty: "Intermediate",
-      tags: ["Bug Fix", "Export", "Coordinates"],
-      deadline: "7 days"
-    }
-  ]
+  const activeBounties: { id: number; title: string; description: string; reward: string; difficulty: string; tags: string[]; deadline: string }[] = [] // no invented entries: real ones come from GitHub issues
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -141,7 +104,8 @@ export default function BountiesPage() {
           <section className="active-bounties-section">
             <h2>Active Bounties</h2>
             <div className="bounties-grid">
-              {activeBounties.map(bounty => (
+              {activeBounties.length === 0 && <p style={{ color: '#9ca3af', padding: '24px 0' }}>No open bounties yet. See <a href="https://github.com/bitcoin-apps-suite/bitcoin-maps/issues" style={{ color: '#f59e0b' }}>GitHub issues</a>.</p>}
+          {activeBounties.map(bounty => (
                 <div key={bounty.id} className="bounty-card">
                   <div className="bounty-header">
                     <h3>{bounty.title}</h3>

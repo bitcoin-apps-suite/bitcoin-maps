@@ -10,38 +10,7 @@ import '../page-styles.css'
 export default function ContractsPage() {
   const [activeTab, setActiveTab] = useState('browse')
 
-  const contracts = [
-    {
-      id: 1,
-      title: "Traffic Flow Analysis - Downtown SF",
-      description: "Map and analyze traffic patterns in downtown San Francisco during peak hours",
-      budget: "5,000 BMAPS",
-      deadline: "7 days",
-      client: "SF Transportation Dept",
-      difficulty: "Advanced",
-      tags: ["Traffic", "Analysis", "Real-time"]
-    },
-    {
-      id: 2,
-      title: "Hiking Trail Mapping - Yosemite",
-      description: "Create detailed trail maps with elevation data and point-of-interest markers",
-      budget: "3,200 BMAPS",
-      deadline: "14 days",
-      client: "National Park Service",
-      difficulty: "Intermediate",
-      tags: ["Trails", "Recreation", "Outdoor"]
-    },
-    {
-      id: 3,
-      title: "Delivery Route Optimization",
-      description: "Map optimal delivery routes for last-mile logistics in urban areas",
-      budget: "8,500 BMAPS",
-      deadline: "5 days",
-      client: "LogiTech Corp",
-      difficulty: "Expert",
-      tags: ["Logistics", "Optimization", "Commercial"]
-    }
-  ]
+  const contracts: { id: number; title: string; description: string; budget: string; deadline: string; client: string; difficulty: string; tags: string[] }[] = [] // no invented entries: real ones come from GitHub issues
 
   return (
     <div className="min-h-screen bg-gray-900">
@@ -115,7 +84,8 @@ export default function ContractsPage() {
 
           {activeTab === 'browse' && (
             <div className="contracts-grid">
-              {contracts.map(contract => (
+              {contracts.length === 0 && <p style={{ color: '#9ca3af', padding: '24px 0' }}>No open contracts yet. See <a href="https://github.com/bitcoin-apps-suite/bitcoin-maps/issues" style={{ color: '#f59e0b' }}>GitHub issues</a>.</p>}
+          {contracts.map(contract => (
                 <div key={contract.id} className="contract-card">
                   <div className="contract-header">
                     <h3>{contract.title}</h3>
@@ -190,22 +160,22 @@ export default function ContractsPage() {
               <div className="contract-status-grid">
                 <div className="status-card in-progress">
                   <h4>In Progress</h4>
-                  <div className="status-number">3</div>
+                  <div className="status-number">0</div>
                   <p>Active mapping projects</p>
                 </div>
                 <div className="status-card pending">
                   <h4>Pending Review</h4>
-                  <div className="status-number">2</div>
+                  <div className="status-number">0</div>
                   <p>Awaiting client approval</p>
                 </div>
                 <div className="status-card completed">
                   <h4>Completed</h4>
-                  <div className="status-number">15</div>
+                  <div className="status-number">0</div>
                   <p>Successfully completed</p>
                 </div>
                 <div className="status-card earnings">
                   <h4>Total Earnings</h4>
-                  <div className="status-number">45,230</div>
+                  <div className="status-number">0</div>
                   <p>BMAPS tokens earned</p>
                 </div>
               </div>

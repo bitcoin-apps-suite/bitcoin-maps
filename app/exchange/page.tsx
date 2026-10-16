@@ -116,137 +116,20 @@ export default function ExchangePage() {
     }
   }, [])
 
-  // Mock data
+  // No listings exist yet: never show invented markets.
   useEffect(() => {
-    const mockMaps: MapListing[] = [
-      {
-        rank: 1,
-        title: "Premium NYC Real Estate Data",
-        description: "Comprehensive property values, transaction history, and market trends for Manhattan",
-        author: "NYC Property Analytics",
-        authorHandle: "$nycproperty",
-        authorType: "business",
-        publishDate: "2025-01-15",
-        dataPoints: 450000,
-        views: 125000,
-        purchases: 8200,
-        sharesAvailable: 300,
-        totalShares: 500,
-        revenue: 410000.00,
-        dividendPerShare: 41.00,
-        volume24h: 580000,
-        currentPrice: 1250.00,
-        priceChange24h: 12.5,
-        marketCap: 625000,
-        dataType: "premium",
-        category: "Real Estate",
-        tags: ["real estate", "NYC", "analytics"],
-        trending: true,
-        txId: "map1prem...",
-        verified: true
-      },
-      {
-        rank: 2,
-        title: "Global Transportation Networks",
-        description: "Real-time public transit schedules, routes, and performance data for 50+ cities",
-        author: "TransitData Corp",
-        authorHandle: "$transitdata",
-        authorType: "enterprise",
-        publishDate: "2025-01-14",
-        dataPoints: 890000,
-        views: 98000,
-        purchases: 6100,
-        sharesAvailable: 420,
-        totalShares: 600,
-        revenue: 305000.00,
-        dividendPerShare: 30.50,
-        volume24h: 445000,
-        currentPrice: 950.00,
-        priceChange24h: 8.3,
-        marketCap: 570000,
-        dataType: "verified",
-        category: "Transportation",
-        tags: ["transit", "global", "real-time"],
-        txId: "map2ver...",
-        verified: true
-      },
-      {
-        rank: 3,
-        title: "Emergency Response Zones",
-        description: "Critical infrastructure mapping for emergency services and disaster response",
-        author: "Emergency Systems Inc",
-        authorHandle: "$emergency",
-        authorType: "business",
-        publishDate: "2025-01-13",
-        dataPoints: 230000,
-        views: 156000,
-        purchases: 9500,
-        sharesAvailable: 180,
-        totalShares: 800,
-        revenue: 475000.00,
-        dividendPerShare: 47.50,
-        volume24h: 720000,
-        currentPrice: 1580.00,
-        priceChange24h: 18.7,
-        marketCap: 1264000,
-        dataType: "real-time",
-        category: "Emergency Services",
-        tags: ["emergency", "infrastructure", "response"],
-        trending: true,
-        txId: "map3real...",
-        verified: true
-      }
-    ]
+    const listedMaps: MapListing[] = []
 
-    const mockProviders: ProviderListing[] = [
-      {
-        rank: 1,
-        name: "GeoSpatial Analytics Corp",
-        handle: "$geospatial",
-        providerType: "enterprise",
-        category: "enterprises",
-        joinDate: "2024-01-15",
-        totalDatasets: 45,
-        totalUsers: 125000,
-        totalRevenue: 2800000.00,
-        avgRating: 4.9,
-        sharesAvailable: 45,
-        totalShares: 2500,
-        currentPrice: 2485.00,
-        priceChange24h: 38.2,
-        marketCap: 6212500,
-        verified: true,
-        trending: true
-      },
-      {
-        rank: 2,
-        name: "Urban Planning Solutions",
-        handle: "$urbanplanning",
-        providerType: "business",
-        category: "businesses",
-        joinDate: "2023-11-20",
-        totalDatasets: 32,
-        totalUsers: 89000,
-        totalRevenue: 1850000.00,
-        avgRating: 4.8,
-        sharesAvailable: 120,
-        totalShares: 2200,
-        currentPrice: 1425.00,
-        priceChange24h: 22.8,
-        marketCap: 3135000,
-        verified: true,
-        trending: true
-      }
-    ]
+    const listedProviders: ProviderListing[] = []
 
     if (activeView === 'providers') {
-      let filteredProviders = mockProviders.filter(p => p.providerType === providerType)
+      let filteredProviders = listedProviders.filter(p => p.providerType === providerType)
       if (providerCategory !== 'all') {
         filteredProviders = filteredProviders.filter(p => p.category === providerCategory)
       }
       setProviders(filteredProviders)
     } else {
-      let contentData = mockMaps.filter(m => m.dataType === activeView)
+      let contentData = listedMaps.filter(m => m.dataType === activeView)
       if (activeMarket !== 'All') {
         contentData = contentData.filter(item => item.category === activeMarket)
       }
@@ -426,6 +309,9 @@ export default function ExchangePage() {
                   </tr>
                 </thead>
                 <tbody>
+                  {filteredMaps.length === 0 && (
+                    <tr><td colSpan={9} style={{ padding: '32px', textAlign: 'center', color: '#9ca3af' }}>No map data listed yet.</td></tr>
+                  )}
                   {filteredMaps.map((map) => (
                     <tr 
                       key={map.txId}
@@ -510,6 +396,9 @@ export default function ExchangePage() {
                   </tr>
                 </thead>
                 <tbody>
+                  {filteredProviders.length === 0 && (
+                    <tr><td colSpan={9} style={{ padding: '32px', textAlign: 'center', color: '#9ca3af' }}>No providers listed yet.</td></tr>
+                  )}
                   {filteredProviders.map((provider) => (
                     <tr 
                       key={provider.handle}

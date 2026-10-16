@@ -71,7 +71,7 @@ export default function ContributeAddPage() {
             </p>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-value">500+</span>
+                <span className="stat-value">—</span>
                 <span className="stat-label">BMAPS per submission</span>
               </div>
               <div className="stat">
@@ -79,7 +79,7 @@ export default function ContributeAddPage() {
                 <span className="stat-label">Review time</span>
               </div>
               <div className="stat">
-                <span className="stat-value">95%</span>
+                <span className="stat-value">—</span>
                 <span className="stat-label">Approval rate</span>
               </div>
             </div>
