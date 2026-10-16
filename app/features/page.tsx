@@ -72,7 +72,7 @@ export default function FeaturesPage() {
             <div className="step-card">
               <div className="step-number">03</div>
               <h3>Instant Payments</h3>
-              <p>Receive micropayments instantly through HandCash or Bitcoin wallets</p>
+              <p>Receive micropayments instantly through bWalletX or any BRC-100 Bitcoin wallet</p>
             </div>
           </div>
         </div>
