@@ -70,7 +70,7 @@ export default function BusinessPremiumPage() {
             </p>
             <div className="hero-stats">
               <div className="stat">
-                <span className="stat-value">99.99%</span>
+                <span className="stat-value">—</span>
                 <span className="stat-label">Uptime SLA</span>
               </div>
               <div className="stat">
@@ -292,7 +292,7 @@ export default function BusinessPremiumPage() {
               <div className="calculator-results">
                 <div className="savings-card">
                   <h4>Estimated Monthly Savings</h4>
-                  <div className="savings-amount">$1,247</div>
+                  <div className="savings-amount">—</div>
                   <div className="savings-details">
                     <span>46% cost reduction</span>
                     <span>2.5x faster development</span>

@@ -271,12 +271,12 @@ export default function TokenPage() {
               </div>
               <div className="stat">
                 <h3>Distributed</h3>
-                <p className="stat-value">100,000</p>
+                <p className="stat-value">0</p>
                 <p className="stat-label">Tokens allocated</p>
               </div>
               <div className="stat">
                 <h3>Mappers</h3>
-                <p className="stat-value">25</p>
+                <p className="stat-value">—</p>
                 <p className="stat-label">Active contributors</p>
               </div>
               <div className="stat">

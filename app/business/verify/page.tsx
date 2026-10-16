@@ -74,7 +74,7 @@ export default function BusinessVerifyPage() {
                 <span className="stat-label">Verification Time</span>
               </div>
               <div className="stat">
-                <span className="stat-value">99.8%</span>
+                <span className="stat-value">—</span>
                 <span className="stat-label">Approval Rate</span>
               </div>
               <div className="stat">

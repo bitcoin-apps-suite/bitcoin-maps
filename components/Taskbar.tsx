@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import WalletButton from './WalletButton';
 
 interface DropdownItem {
   label?: string;
@@ -418,8 +419,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
 
       {/* Right side - Status items */}
       <div className="taskbar-status">
-        <span className="status-text">Protocol Active</span>
-        <span className="status-indicator connected">●</span>
+        <WalletButton />
         <a 
           href="https://x.com/bitcoin_maps" 
           target="_blank" 
@@ -456,10 +456,7 @@ const Taskbar: React.FC<TaskbarProps> = ({ onShowMap }) => {
               alignItems: 'center',
               justifyContent: 'space-between'
             }}>
-              <span style={{ color: '#ffffff', fontSize: '14px' }}>
-                Protocol Active
-              </span>
-              <span style={{ color: '#30d158' }}>●</span>
+              <WalletButton />
             </div>
 
             {/* Menu Sections */}
