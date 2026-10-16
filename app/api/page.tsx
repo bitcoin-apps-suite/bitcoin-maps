@@ -68,7 +68,7 @@ export default function ApiPage() {
           {activeSection === 'authentication' && (
             <div className="api-section">
               <h2>Authentication</h2>
-              <p>Authenticate with Bitcoin Maps API using your API key or HandCash account.</p>
+              <p>Authenticate with Bitcoin Maps API using your API key or a BRC-100 wallet (bWalletX or any compatible wallet).</p>
               
               <div className="code-block">
                 <pre>{`curl -X GET "https://api.bitcoin-maps.com/v1/user/profile" \\
@@ -79,8 +79,8 @@ export default function ApiPage() {
               <h3>API Key Authentication</h3>
               <p>Include your API key in the Authorization header for all requests.</p>
 
-              <h3>HandCash Authentication</h3>
-              <p>Use HandCash OAuth for user authentication and payments.</p>
+              <h3>Wallet Authentication (BRC-100)</h3>
+              <p>Sign in with bWalletX or any BRC-100 wallet; payments are approved in the wallet.</p>
             </div>
           )}
 
@@ -148,7 +148,7 @@ GET /v1/maps?bounds=37.7,-122.5,37.8,-122.4`}</pre>
               <div className="code-block">
                 <pre>{`POST /v1/payments
 {
-  "recipient": "handcash_handle",
+  "recipient": "name@bwalletx.com",
   "amount": 1000,
   "currency": "BMAPS",
   "reference": "map_purchase_12345"
